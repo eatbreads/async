@@ -1,0 +1,108 @@
+Test started at: Thu Mar 27 12:28:49 2025
+
+[Client 1] Finished all interactions. Total time: 0.0126378 seconds
+[Client 4] Finished all interactions. Total time: 0.0204749 seconds
+[Client 2] Finished all interactions. Total time: 0.0280197 seconds
+[Client 7] Finished all interactions. Total time: 0.0351151 seconds
+[Client 6] Finished all interactions. Total time: 0.0422868 seconds
+[Client 3] Finished all interactions. Total time: 0.0498624 seconds
+[Client 8] Finished all interactions. Total time: 0.0553304 seconds
+[Client 5] Finished all interactions. Total time: 1.03515 seconds
+[Client 10] Finished all interactions. Total time: 1.0437 seconds
+[Client 9] Finished all interactions. Total time: 1.04962 seconds
+Test completed. Total test duration: 1.05143 seconds
+-----------------------------------------------
+Test started at: Thu Mar 27 12:33:48 2025
+
+
+
+
+[Client 23] Failed to connect to the server!] Failed to connect to the server!
+[Client 23] Failed to connect to the server!] Failed to connect to the server!
+[Client 23] Failed to connect to the server!] Failed to connect to the server!
+[Client 1] Failed to connect to the server!
+[Client 5] Failed to connect to the server!
+[Client 4] Failed to connect to the server!
+[Client 6] Failed to connect to the server!
+[Client 7] Failed to connect to the server!
+[Client 9] Failed to connect to the server!
+[Client 8] Failed to connect to the server!
+[Client 10] Failed to connect to the server!
+[Client 11] Failed to connect to the server!
+[Client 12] Failed to connect to the server!
+[Client 15] Failed to connect to the server!
+[Client 13] Failed to connect to the server!
+[Client 14] Failed to connect to the server!
+[Client 14] Failed to connect to the server!
+[Client 16] Failed to connect to the server!
+[Client 17] Failed to connect to the server!
+[Client 18] Failed to connect to the server!
+[Client 19] Failed to connect to the server!
+[Client 20] Failed to connect to the server!
+Test completed. Total test duration: 0.00201539 seconds
+-----------------------------------------------
+Test started at: Thu Mar 27 12:34:07 2025
+
+
+
+
+[Client 2] Finished all interactions. Total time: 0.0107584 seconds
+[Client 1] Finished all interactions. Total time: 0.0177299 seconds
+[Client 3] Finished all interactions. Total time: 0.0244873 seconds
+[Client 4] Finished all interactions. Total time: 0.0332587 seconds
+[Client 6] Finished all interactions. Total time: 0.0398095 seconds
+[Client 5] Finished all interactions. Total time: 0.046174 seconds
+[Client 8] Finished all interactions. Total time: 0.0537853 seconds
+[Client 14] Finished all interactions. Total time: 1.07866 seconds
+[Client 11] Finished all interactions. Total time: 1.08633 seconds
+[Client 17] Finished all interactions. Total time: 1.09111 seconds
+[Client 18] Finished all interactions. Total time: 1.09738 seconds
+[Client 7] Finished all interactions. Total time: 1.10515 seconds
+[Client 20] Finished all interactions. Total time: 1.10987 seconds
+[Client 12] Finished all interactions. Total time: 1.11747 seconds
+[Client 10] Finished all interactions. Total time: 3.15284 seconds
+[Client 13] Finished all interactions. Total time: 3.16384 seconds
+[Client 15] Finished all interactions. Total time: 3.17031 seconds
+[Client 19] Finished all interactions. Total time: 3.17542 seconds
+[Client 9] Finished all interactions. Total time: 3.18381 seconds
+[Client 16] Finished all interactions. Total time: 3.18958 seconds
+Test completed. Total test duration: 3.19268 seconds
+-----------------------------------------------
+
+
+
+
+Test started at: Thu Mar 27 12:34:57 2025
+
+[Client 1] Failed to connect to the server!
+[Client 3] Failed to connect to the server!
+[Client 3] Failed to connect to the server!
+[Client 2] Failed to connect to the server!
+[Client 5] Failed to connect to the server!
+[Client 5] Failed to connect to the server!
+[Client 4] Failed to connect to the server!
+[Client 8] Failed to connect to the server!
+[Client 7] Failed to connect to the server!
+[Client 10] Failed to connect to the server!
+[Client 9] Failed to connect to the server!
+6] Failed to connect to the server!
+Test completed. Total test duration: 0.000528017 seconds
+-----------------------------------------------
+
+
+
+
+Test started at: Thu Mar 27 12:35:19 2025
+
+[Client 1] Finished all interactions. Total time: 0.0110168 seconds
+[Client 3] Finished all interactions. Total time: 0.0192362 seconds
+[Client 4] Finished all interactions. Total time: 0.0253912 seconds
+[Client 2] Finished all interactions. Total time: 0.0328316 seconds
+[Client 5] Finished all interactions. Total time: 0.0405048 seconds
+[Client 7] Finished all interactions. Total time: 0.0476972 seconds
+[Client 6] Finished all interactions. Total time: 0.0542565 seconds
+[Client 10] Finished all interactions. Total time: 1.05097 seconds
+[Client 9] Finished all interactions. Total time: 1.06243 seconds
+[Client 8] Finished all interactions. Total time: 1.07075 seconds
+Test completed. Total test duration: 1.07129 seconds
+-----------------------------------------------

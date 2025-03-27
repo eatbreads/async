@@ -22,8 +22,8 @@ add_executable(client client.cpp)
 # target_link_libraries(main PRIVATE ZLIB::ZLIB CURL::libcurl)
 
 # 可选：添加 include 目录（如果需要的话）
-# target_include_directories(main PRIVATE ${CMAKE_SOURCE_DIR}/include)
-
+target_include_directories(server PRIVATE ${CMAKE_SOURCE_DIR})
+target_include_directories(client PRIVATE ${CMAKE_SOURCE_DIR})
 # 如果你有多个源文件，可以直接在这里添加
 # add_executable(main src/main.cpp src/other_file.cpp)
 

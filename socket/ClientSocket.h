@@ -1,4 +1,4 @@
-#include <socket/BashSocket.h>
+#include <socket/BaseSocket.h>
 
 namespace MyProject {
 namespace Networking {
@@ -12,7 +12,8 @@ public:
     bool connectToServer(const std::string &ip, int port) {
         address.sin_family = AF_INET;
         address.sin_port = htons(port);
-        if (inet_pton(AF_INET, ip.c_str(), &address.sin_addr) <= 0) {
+        if (inet_pton(AF_INET, ip.c_str(), &address.sin_addr) <= 0) 
+        {
             perror("Invalid address");
             return false;
         }

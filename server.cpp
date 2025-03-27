@@ -5,58 +5,47 @@
 #include <cstring>
 #include <socket/ServerSocket.h>
 
-#define PORT 8082
-using namespace MyProject::Networking;
 
-int main()
-{
-    int server_fd,new_socket;
-    struct sockaddr_in address;
-    socklen_t addrlen = sizeof(address);
-    char buffer[1024] = {0};
+int main() {
+    // 创建 ServerSocket 实例，绑定端口 12345
+    MyProject::Networking::ServerSocket server(8082);
 
+    // 开始监听客户端连接
+    server.listenSocket(5);  // 最大客户端排队数为 5
+    std::cout << "Server listening on port 8082..." << std::endl;
 
-    //创建服务器
-    server_fd = socket(AF_INET, SOCK_STREAM, 0);
-    if(server_fd == 0)
-    {
-        perror("socket faild");
-        exit(EXIT_FAILURE);
-    }
-    
-    // 绑定地址和端口
-    address.sin_family = AF_INET;
-    address.sin_addr.s_addr = INADDR_ANY;
-    address.sin_port = htons(PORT);
-       
-       
-    if (bind(server_fd, (struct sockaddr*)&address, sizeof(address)) < 0) {
-        perror("Bind failed");
-        exit(EXIT_FAILURE);
-    }
-    // 监听端口，最多 3 个客户端排队
-    if (listen(server_fd, 3) < 0) {
-        perror("Listen failed");
-        exit(EXIT_FAILURE);
-    }
-    std::cout << "Server listening on port " << PORT << std::endl;
+    while (true) {
         // 接受客户端连接
-    new_socket = accept(server_fd, (struct sockaddr*)&address, &addrlen);
-    if (new_socket < 0) {
-        perror("Accept failed");
-        exit(EXIT_FAILURE);
+        int client_fd = server.acceptClient();
+        if (client_fd >= 0) {
+            std::cout << "Client connected!" << std::endl;
+
+            char buffer[1024];
+            ssize_t bytesReceived;
+
+            // 循环接收客户端消息并回显
+            while ((bytesReceived = recv(client_fd, buffer, sizeof(buffer), 0)) > 0) {
+                // 回显接收到的消息
+                ssize_t bytesSent = send(client_fd, buffer, bytesReceived, 0);
+                if (bytesSent == -1) {
+                    std::cerr << "Error sending message to client" << std::endl;
+                    break;
+                }
+            }
+
+            if (bytesReceived == -1) {
+                std::cerr << "Error receiving message from client" << std::endl;
+            }
+
+            std::cout << "Client disconnected!" << std::endl;
+
+            // 关闭客户端连接
+            close(client_fd);
+        }
     }
 
-    read(new_socket, buffer, 1024);
-    std::cout << "Received from client: " << buffer << std::endl;
+    // 关闭服务器套接字
+    server.closeSocket();
 
-    // 发送响应
-    const char* response = "Hello from server";
-    send(new_socket, response, strlen(response), 0);
-    
-    
-    // 关闭连接
-    close(new_socket);
-    close(server_fd);
     return 0;
 }
